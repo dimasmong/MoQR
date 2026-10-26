@@ -1,0 +1,11 @@
+{
+  "name": "moqr-studio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Private, bilingual QR code studio — static website",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node --check app.js && node --check vendor/qr-engine.js && node scripts/build.mjs"
+  },
+  "license": "MIT"
+}

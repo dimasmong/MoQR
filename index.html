@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f7f8fe" />
+  <meta name="description" content="MoQR — beautiful, customizable QR codes, generated privately in your browser. Free PNG and SVG downloads." />
+  <meta property="og:title" content="MoQR — Beautiful QR Codes, Made Simple" />
+  <meta property="og:description" content="Create beautiful QR codes for links, Wi-Fi, contacts, and more. Private and free." />
+  <title>MoQR — QR Code Studio</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+  <script>try{let t=localStorage.getItem('moqr-theme');if(t==='dark')document.documentElement.dataset.theme='dark'}catch(e){}</script>
+  <script src="vendor/qr-engine.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a href="#top" class="brand" aria-label="MoQR Home"><span class="brand-icon"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="6" y="6" width="8" height="8" rx="1"/><rect x="18" y="6" width="8" height="8" rx="1"/><rect x="6" y="18" width="8" height="8" rx="1"/><rect x="19" y="19" width="6" height="6" rx="1"/><path d="M21 16v2M16 21h2" stroke="white" stroke-width="2"/></svg></span><span>Mo<span class="brand-gradient">QR</span></span></a>
+      <nav class="header-right" aria-label="Main navigation">
+        <span class="privacy-pill"><span class="live-dot"></span><span data-i18n="privacy">PRIVACY FIRST</span></span>
+        <a class="nav-how" href="#how" data-i18n="howLink">How it works</a>
+        <label class="visually-hidden" for="language">Language / Bahasa</label>
+        <select id="language" class="nav-select" aria-label="Language"><option value="en">EN</option><option value="id">ID</option></select>
+        <button id="themeToggle" type="button" class="theme-toggle" aria-label="Toggle dark mode"><span id="themeSymbol">☾</span><span id="themeText">Dark</span></button>
+        <a class="github-link" href="https://github.com/dimasmong/moqr" target="_blank" rel="noopener noreferrer" title="MoQR on GitHub" aria-label="MoQR on GitHub"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .8a11.2 11.2 0 0 0-3.54 21.83c.56.1.77-.24.77-.54v-2.02c-3.13.68-3.79-1.34-3.79-1.34-.5-1.29-1.25-1.63-1.25-1.63-1.02-.7.08-.69.08-.69 1.13.08 1.73 1.16 1.73 1.16 1 1.72 2.63 1.22 3.27.93.1-.72.39-1.22.71-1.5-2.5-.28-5.12-1.25-5.12-5.57 0-1.23.44-2.23 1.16-3.01-.12-.28-.5-1.43.11-2.98 0 0 .94-.3 3.08 1.15a10.7 10.7 0 0 1 5.6 0c2.13-1.45 3.07-1.15 3.07-1.15.61 1.55.23 2.7.12 2.98.72.78 1.15 1.78 1.15 3.01 0 4.33-2.63 5.28-5.14 5.56.4.34.75 1 .75 2.02v2.99c0 .3.2.65.78.54A11.2 11.2 0 0 0 12 .8Z"/></svg></a>
+      </nav>
+    </div>
+  </header>
+  <main id="top">
+    <section class="hero shell">
+      <div class="hero-glow"></div>
+      <span class="eyebrow"><span>✧</span> <span data-i18n="eyebrow">DESIGN IT. SCAN IT. SHARE IT.</span></span>
+      <h1><span data-i18n="headline1">Make every scan</span><br><span class="gradient-text" data-i18n="headline2">a little more beautiful.</span></h1>
+      <p class="hero-sub" data-i18n="subheadline">Create beautiful, reliable QR codes for everything that matters. Customize every detail, keep your data private, and download in seconds.</p>
+      <div class="hero-features"><span>✓ <span data-i18n="hero1">Completely free</span></span><span>♧ <span data-i18n="hero2">Runs in your browser</span></span><span>⇩ <span data-i18n="hero3">PNG &amp; SVG downloads</span></span></div>
+    </section>
+    <section class="studio shell" aria-label="QR Code Studio">
+      <div class="studio-top"><div><div class="micro-label" data-i18n="workspace">YOUR WORKSPACE</div><h2 data-i18n="studioTitle">QR Code Studio</h2></div><span class="version-pill"><span class="status-dot"></span> QR ENGINE <b>v1.0</b></span></div>
+      <div class="workspace-grid">
+        <div class="editor-panel">
+          <div class="section-title"><span class="step-index">01</span><div><h3 data-i18n="typeTitle">What are we creating?</h3><p data-i18n="typeSub">Pick a type and fill in the details.</p></div></div>
+          <div class="type-tabs" role="tablist" aria-label="QR code content type">
+            <button type="button" class="type-tab active" data-type="url" role="tab" aria-selected="true"><span class="tab-icon">↗</span><span data-i18n="tabUrl">Website</span></button>
+            <button type="button" class="type-tab" data-type="text" role="tab" aria-selected="false"><span class="tab-icon">≡</span><span data-i18n="tabText">Text</span></button>
+            <button type="button" class="type-tab" data-type="wifi" role="tab" aria-selected="false"><span class="tab-icon">◉</span><span data-i18n="tabWifi">Wi-Fi</span></button>
+            <button type="button" class="type-tab" data-type="contact" role="tab" aria-selected="false"><span class="tab-icon">♧</span><span data-i18n="tabContact">Contact</span></button>
+            <button type="button" class="type-tab" data-type="email" role="tab" aria-selected="false"><span class="tab-icon">✉</span><span data-i18n="tabEmail">Email</span></button>
+            <button type="button" class="type-tab" data-type="whatsapp" role="tab" aria-selected="false"><span class="tab-icon">◌</span><span data-i18n="tabWhatsapp">WhatsApp</span></button>
+          </div>
+          <div id="fieldsArea" class="fields" aria-live="polite"></div>
+          <div class="section-divider"></div>
+          <div class="section-title"><span class="step-index">02</span><div><h3 data-i18n="designTitle">Make it your own</h3><p data-i18n="designSub">Style your QR without compromising readability.</p></div></div>
+          <div class="form-grid">
+            <div class="field"><label for="fgColor" data-i18n="frontColor">QR foreground</label><div class="color-input"><input type="color" id="fgColor" value="#282541"/><span id="fgHex">#282541</span></div></div>
+            <div class="field"><label for="bgColor" data-i18n="backColor">Background</label><div class="color-input"><input type="color" id="bgColor" value="#ffffff"/><span id="bgHex">#FFFFFF</span></div></div>
+            <div class="field"><label for="pattern" data-i18n="dotStyle">Module style</label><select id="pattern"><option value="square" data-i18n="square">Classic squares</option><option value="rounded" data-i18n="rounded">Soft rounded</option><option value="dots" data-i18n="dots">Round dots</option></select></div>
+            <div class="field"><label for="ecc" data-i18n="correction">Error correction</label><select id="ecc"><option value="L">Low · L</option><option value="M">Medium · M</option><option value="Q" selected>Quartile · Q</option><option value="H">High · H</option></select></div>
+            <div class="field full"><div class="label-row"><label for="logoUpload" data-i18n="logoTitle">Add a center logo</label><span class="optional" data-i18n="optional">OPTIONAL</span></div><div class="logo-control"><label class="logo-add" for="logoUpload"><span>＋</span><span id="logoLabel" data-i18n="logoChoose">Choose logo · PNG, JPG, WebP</span></label><input id="logoUpload" type="file" accept="image/png,image/jpeg,image/webp" hidden/><button type="button" id="removeLogo" class="remove-logo" hidden data-i18n="remove">Remove</button></div><p class="field-hint" data-i18n="logoHint">Adding a logo automatically uses high error correction. Always test scanning.</p></div>
+          </div>
+          <div id="contrastWarning" class="notice warning" hidden role="status">⚠ <span data-i18n="contrastWarn">These colors may be difficult to scan. Choose a darker foreground and lighter background.</span></div>
+        </div>
+        <aside class="preview-panel">
+          <div class="section-title preview-heading"><span class="step-index">03</span><div><h3 data-i18n="previewTitle">Your live preview</h3><p data-i18n="previewSub">Changes appear automatically.</p></div></div>
+          <div class="preview-card"><div id="qrPreview" class="qr-preview" aria-label="QR code preview"><div class="preview-placeholder"><div class="mini-qr">▦</div><span data-i18n="starting">Generating preview…</span></div></div></div>
+          <div id="qrStatus" class="qr-status" role="status"><span class="status-led"></span><span data-i18n="ready">Ready to scan</span></div>
+          <div class="output-options"><div class="field"><label for="size" data-i18n="resolution">Download resolution</label><select id="size"><option value="512">512 × 512 px</option><option value="1024" selected>1024 × 1024 px</option><option value="2048">2048 × 2048 px</option></select></div></div>
+          <div class="download-grid"><button type="button" id="downloadPng" class="btn btn-primary"><span>↓</span> <span data-i18n="downloadPng">Download PNG</span></button><button type="button" id="downloadSvg" class="btn btn-outline"><span>◇</span> <span data-i18n="downloadSvg">Download SVG</span></button></div>
+          <button type="button" id="copyPayload" class="copy-button"><span>⧉</span><span data-i18n="copyContent">Copy QR content</span></button>
+          <div class="privacy-note"><span>♧</span><p data-i18n="privateNote">Your QR content stays on your device. No uploads, no account, no tracking.</p></div>
+        </aside>
+      </div>
+    </section>
+    <section class="bottom shell" id="how"><div class="micro-label" data-i18n="whyLabel">WHY MOQR</div><h2 data-i18n="whyTitle">Everything you need.<br>Nothing you don't.</h2><div class="benefits"><article><div class="benefit-icon purple">✧</div><h3 data-i18n="benefit1t">Designed for your brand</h3><p data-i18n="benefit1d">A polished QR code with colors and your own logo, no design skills needed.</p></article><article><div class="benefit-icon cyan">♧</div><h3 data-i18n="benefit2t">Private by design</h3><p data-i18n="benefit2d">Everything is encoded on your device — including Wi-Fi passwords and contacts.</p></article><article><div class="benefit-icon peach">⇩</div><h3 data-i18n="benefit3t">Ready for anywhere</h3><p data-i18n="benefit3d">Sharp SVG for print and crisp PNG for social media or everyday use.</p></article></div></section>
+    <section class="faq shell"><div class="micro-label" data-i18n="faqLabel">GOOD TO KNOW</div><h2 data-i18n="faqTitle">Frequently asked questions</h2><details><summary data-i18n="faq1q">Are MoQR codes free forever?</summary><p data-i18n="faq1a">Yes. MoQR creates standard, static QR codes. You can download them freely without an account.</p></details><details><summary data-i18n="faq2q">Will a QR code expire?</summary><p data-i18n="faq2a">No. The QR image does not expire, but a linked website or other destination may stop working.</p></details><details><summary data-i18n="faq3q">Can I add any logo and colors?</summary><p data-i18n="faq3a">You can customize both. Very large logos or low-contrast colors may prevent scanning, so test with more than one camera before printing.</p></details></section>
+  </main>
+  <footer><div class="shell footer-content"><div class="footer-logo">✦ <b>MoQR</b> <span data-i18n="footerSlogan">— made to be scanned.</span></div><span data-i18n="footerPrivacy">Built with care. Your data stays yours.</span></div></footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
